@@ -1,3 +1,5 @@
+import profileImage from "../assets/profile.jpg";
+
 const About = () => {
   return (
     <section className="py-16 bg-gray-50 px-4">
@@ -6,11 +8,11 @@ const About = () => {
           <div className="md:flex">
             <div className="md:w-1/2 relative h-[400px]">
               <img
-                src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                alt="Professional portrait"
+                src={profileImage}
+                alt="Kotani Naga Sai Ramu - TUFF EDITZ Founder"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
                 <h2 className="text-white text-3xl md:text-4xl font-bold font-poppins">About us</h2>
               </div>
             </div>
