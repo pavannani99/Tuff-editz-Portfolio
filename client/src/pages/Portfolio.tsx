@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 
-// Import project images - use the correct path for the assets
-import image1 from "../assets/images/Visily-Export_05-04-2025_03-23-1.png";
-import image2 from "../assets/images/Visily-Export_05-04-2025_03-23-2.png";
-import image3 from "../assets/images/Visily-Export_05-04-2025_03-23-3.png";
-import image4 from "../assets/images/Visily-Export_05-04-2025_03-23-4.png";
-import image5 from "../assets/images/Visily-Export_05-04-2025_03-23-5.png";
-import profilePic from "../assets/images/profile-pic.jpg";
+// Import project-specific images
+import sportsImage from "../assets/images/projects/sports.png";
+import weddingImage from "../assets/images/projects/wedding.jpg";
+import musicImage from "../assets/images/projects/music.png";
+import brandImage from "../assets/images/projects/brand.png";
+import documentaryImage from "../assets/images/projects/documentary.png";
+import corporateImage from "../assets/images/projects/corporate.png";
 
 interface ProjectCardProps {
   title: string;
@@ -49,37 +49,37 @@ const Portfolio = () => {
     {
       title: "Sports Highlights",
       description: "Capturing the energy of live sports moments.",
-      imageUrl: image1,
+      imageUrl: sportsImage,
       videoUrl: "https://drive.google.com/file/d/1_tOLbuHb47lWA9BVhLE6uBEB-iJ9eKi-/view?usp=drive_link"
     },
     {
       title: "Wedding Stories",
       description: "Elegant storytelling for special days.",
-      imageUrl: image2,
+      imageUrl: weddingImage,
       videoUrl: "https://drive.google.com/file/d/1x_QWB-rqO5nyEe8oLD7M3kWH2q48nFFf/view?usp=drive_link"
     },
     {
       title: "Music Videos",
       description: "Bringing music to life visually.",
-      imageUrl: image3,
+      imageUrl: musicImage,
       videoUrl: "https://drive.google.com/file/d/1VYD4isHrdyh_No2wB2zah3S9e_QgGPbs/view?usp=drive_link"
     },
     {
       title: "Brand Ads",
       description: "Crafting visually striking campaigns.",
-      imageUrl: image4,
+      imageUrl: brandImage,
       videoUrl: "https://drive.google.com/file/d/1VYD4isHrdyh_No2wB2zah3S9e_QgGPbs/view?usp=drive_link"
     },
     {
       title: "Documentaries",
       description: "Exploring real-world stories in depth.",
-      imageUrl: image5,
+      imageUrl: documentaryImage,
       videoUrl: "https://drive.google.com/file/d/1iNArfVw56yAHDaEBd3opVUI0vh2koGKy/view?usp=drive_link"
     },
     {
       title: "Corporate Videos",
       description: "Delivering impactful business narratives.",
-      imageUrl: profilePic,
+      imageUrl: corporateImage,
       videoUrl: "https://drive.google.com/file/d/1n1nvDF7fKKb0O54gCBMKhbLfmz3xl1UZ/view?usp=drive_link"
     },
   ];
