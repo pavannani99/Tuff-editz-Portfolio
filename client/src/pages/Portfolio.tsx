@@ -4,9 +4,14 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  videoUrl: string;
 }
 
-const ProjectCard = ({ title, description, imageUrl }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, imageUrl, videoUrl }: ProjectCardProps) => {
+  const handleViewProject = () => {
+    window.open(videoUrl, '_blank');
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md">
       <div className="h-48 overflow-hidden">
@@ -19,7 +24,11 @@ const ProjectCard = ({ title, description, imageUrl }: ProjectCardProps) => {
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <Button variant="outline" className="w-full hover:border-primary hover:text-primary">
+        <Button 
+          variant="outline" 
+          className="w-full hover:border-primary hover:text-primary"
+          onClick={handleViewProject}
+        >
           View Project
         </Button>
       </div>
@@ -34,36 +43,42 @@ const Portfolio = () => {
       description: "Capturing the energy of live sports moments.",
       imageUrl:
         "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1_tOLbuHb47lWA9BVhLE6uBEB-iJ9eKi-/view?usp=drive_link"
     },
     {
       title: "Wedding Stories",
       description: "Elegant storytelling for special days.",
       imageUrl:
         "https://images.unsplash.com/photo-1511285560929-80b456503681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1x_QWB-rqO5nyEe8oLD7M3kWH2q48nFFf/view?usp=drive_link"
     },
     {
       title: "Music Videos",
       description: "Bringing music to life visually.",
       imageUrl:
         "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1VYD4isHrdyh_No2wB2zah3S9e_QgGPbs/view?usp=drive_link"
     },
     {
       title: "Brand Ads",
       description: "Crafting visually striking campaigns.",
       imageUrl:
         "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1VYD4isHrdyh_No2wB2zah3S9e_QgGPbs/view?usp=drive_link"
     },
     {
       title: "Documentaries",
       description: "Exploring real-world stories in depth.",
       imageUrl:
         "https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1iNArfVw56yAHDaEBd3opVUI0vh2koGKy/view?usp=drive_link"
     },
     {
       title: "Corporate Videos",
       description: "Delivering impactful business narratives.",
       imageUrl:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://drive.google.com/file/d/1n1nvDF7fKKb0O54gCBMKhbLfmz3xl1UZ/view?usp=drive_link"
     },
   ];
 
@@ -79,6 +94,7 @@ const Portfolio = () => {
               title={project.title}
               description={project.description}
               imageUrl={project.imageUrl}
+              videoUrl={project.videoUrl}
             />
           ))}
         </div>
