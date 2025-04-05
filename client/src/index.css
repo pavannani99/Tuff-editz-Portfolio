@@ -2,12 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @layer base {
+  :root {
+    --header-height: 80px;
+    --transition-slow: 0.5s;
+    --transition-medium: 0.3s;
+    --transition-fast: 0.15s;
+  }
+
   * {
     @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .logo-text {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  /* Smooth transitions for interactive elements */
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  /* Button hover effects */
+  .btn-hover {
+    @apply transition-all duration-300 hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+
+  /* Image hover effects */
+  .image-hover {
+    @apply transition-transform duration-500 hover:scale-105;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  /* Section spacing for consistent layout */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  /* Video responsive container */
+  .video-container {
+    @apply relative overflow-hidden rounded-lg shadow-xl;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+  
+  .video-container iframe,
+  .video-container video {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+  }
+  
+  /* Animated gradient background */
+  .gradient-background {
+    background: linear-gradient(
+      270deg,
+      rgba(121, 40, 202, 0.15),
+      rgba(121, 40, 202, 0.05),
+      rgba(121, 40, 202, 0.15)
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(121, 40, 202, 0.5);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(121, 40, 202, 0.7);
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* Improved focus states for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
 }
