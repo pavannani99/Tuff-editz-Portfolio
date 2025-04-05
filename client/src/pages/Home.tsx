@@ -8,6 +8,7 @@ import musicIcon from "../assets/images/icons/music.svg";
 import brandIcon from "../assets/images/icons/brand.svg";
 import documentaryIcon from "../assets/images/icons/documentary.svg";
 import corporateIcon from "../assets/images/icons/corporate.svg";
+import instagramIcon from "../assets/images/icons/instagram.svg";
 
 const Home = () => {
   // For the previous work section
@@ -19,10 +20,10 @@ const Home = () => {
       icon: sportsIcon
     },
     {
-      title: "Wedding Stories",
-      description: "Elegant storytelling for special days.",
+      title: "Instagram Content",
+      description: "Engaging short-form social media content.",
       videoUrl: "https://drive.google.com/file/d/1x_QWB-rqO5nyEe8oLD7M3kWH2q48nFFf/view?usp=drive_link",
-      icon: weddingIcon
+      icon: instagramIcon
     },
     {
       title: "Music Videos",
