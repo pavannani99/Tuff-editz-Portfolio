@@ -59,11 +59,11 @@ const Home = () => {
             </div>
           </div>
           
-          {/* Video directly embedded from a reliable source with autoplay and explicitly muted */}
+          {/* Main showcase video from Google Drive */}
           <div className="rounded-xl overflow-hidden shadow-lg mb-16">
             <iframe 
               className="w-full aspect-video"
-              src="https://www.youtube.com/embed/vIBBVzy5UoQ?autoplay=1&mute=1&start=10&controls=0&showinfo=0&rel=0&volume=0"
+              src="https://drive.google.com/file/d/1n1nvDF7fKKb0O54gCBMKhbLfmz3xl1UZ/preview"
               title="TUFF EDITZ Demo Reel"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
