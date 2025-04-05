@@ -6,17 +6,16 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 const Home = () => {
   const [videoOpen, setVideoOpen] = useState(false);
   
-  // Demo reel video URL - using a sample video from the portfolio
-  const demoReelUrl = "https://drive.google.com/file/d/1_tOLbuHb47lWA9BVhLE6uBEB-iJ9eKi-/view?usp=drive_link";
-  
-  // Convert Google Drive URL to embed format
-  const getEmbedUrl = (url: string) => {
-    // Extract the file ID from the Google Drive URL
-    const fileId = url.match(/[-\w]{25,}/);
-    if (fileId) {
-      return `https://drive.google.com/file/d/${fileId[0]}/preview`;
-    }
-    return url;
+  // Instead of embedding Google Drive, let's use a direct YouTube link for better compatibility
+  const demoReelUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Replace with actual video
+
+  const openVideo = () => {
+    setVideoOpen(true);
+  };
+
+  const handleExternalVideo = () => {
+    // When using direct URL to a video hosting site like YouTube or Vimeo
+    window.open("https://youtu.be/dQw4w9WgXcQ", "_blank"); // Replace with actual video URL
   };
 
   return (
@@ -43,7 +42,7 @@ const Home = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <button 
               className="bg-white bg-opacity-90 rounded-full p-3 shadow-lg hover:bg-opacity-100 transition duration-200"
-              onClick={() => setVideoOpen(true)}
+              onClick={handleExternalVideo} // Opens video in a new tab
               aria-label="Play demo reel"
             >
               <svg
@@ -63,12 +62,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Video Dialog */}
+      {/* Video Dialog - Alternative approach using a modal */}
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
         <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
           <div className="aspect-video w-full">
             <iframe
-              src={getEmbedUrl(demoReelUrl)}
+              src={demoReelUrl}
               className="w-full h-full"
               allow="autoplay; encrypted-media"
               allowFullScreen
