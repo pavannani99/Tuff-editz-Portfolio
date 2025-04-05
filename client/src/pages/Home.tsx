@@ -3,31 +3,23 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
 const Home = () => {
-  // Since we're using video element instead of iframe, we need to use a public URL
-  // For demo purposes, using a placeholder video URL
+  // Using a professional video demo reel
   const videoUrl = "https://player.vimeo.com/external/490498802.sd.mp4?s=1d541fd34f2de6c25d02b7f2c7c061b2e9555528&profile_id=164&oauth2_token_id=57447761";
   
   // Reference to the video element
   const videoRef = useRef<HTMLVideoElement>(null);
   
-  // Set up the video to play automatically and only show first 20 seconds
+  // Start the video at 10 seconds
   useEffect(() => {
     const videoElement = videoRef.current;
     if (videoElement) {
-      // Add event listener to end the video after 20 seconds
-      const handleTimeUpdate = () => {
-        if (videoElement.currentTime >= 20) {
-          videoElement.currentTime = 0; // Loop back to beginning
-          videoElement.play();
-        }
-      };
-      
-      videoElement.addEventListener('timeupdate', handleTimeUpdate);
-      
-      // Clean up
-      return () => {
-        videoElement.removeEventListener('timeupdate', handleTimeUpdate);
-      };
+      // Start the video at the 10 second mark
+      videoElement.addEventListener('loadedmetadata', () => {
+        videoElement.currentTime = 10; // Start at 10 seconds
+        videoElement.play().catch(error => {
+          console.error("Video playback failed:", error);
+        });
+      });
     }
   }, []);
   
@@ -47,7 +39,7 @@ const Home = () => {
           </div>
         </div>
         
-        {/* Video directly playing in the hero section */}
+        {/* Video directly playing in the hero section, starting at 10s mark */}
         <div className="rounded-xl overflow-hidden shadow-lg bg-black">
           <div className="aspect-video w-full">
             <video
@@ -56,7 +48,7 @@ const Home = () => {
               autoPlay
               muted
               playsInline
-              loop
+              controls={false}
             >
               <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
