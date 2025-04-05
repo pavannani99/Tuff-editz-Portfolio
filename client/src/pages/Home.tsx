@@ -18,11 +18,11 @@ const Home = () => {
           </div>
         </div>
         
-        {/* Video directly embedded from a reliable source with autoplay */}
+        {/* Video directly embedded from a reliable source with autoplay and explicitly muted */}
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe 
             className="w-full aspect-video"
-            src="https://www.youtube.com/embed/vIBBVzy5UoQ?autoplay=1&mute=1&start=10&controls=0&showinfo=0&rel=0"
+            src="https://www.youtube.com/embed/vIBBVzy5UoQ?autoplay=1&mute=1&start=10&controls=0&showinfo=0&rel=0&volume=0"
             title="TUFF EDITZ Demo Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
