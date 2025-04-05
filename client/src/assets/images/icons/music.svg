@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fafc" />
+  <path d="M300 200 L300 400 Q300 450 350 450 Q400 450 400 400 L400 350" stroke="#9333ea" stroke-width="8" fill="none" />
+  <path d="M400 200 L400 350 Q400 400 450 400 Q500 400 500 350 L500 300" stroke="#9333ea" stroke-width="8" fill="none" />
+  <circle cx="300" cy="200" r="20" fill="#9333ea" />
+  <circle cx="400" cy="200" r="20" fill="#9333ea" />
+  <text x="400" y="500" font-family="Arial" font-size="28" text-anchor="middle" fill="#9333ea">Music Videos</text>
+</svg>
