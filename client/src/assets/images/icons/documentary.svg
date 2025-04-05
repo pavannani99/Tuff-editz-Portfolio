@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fafc" />
+  <rect x="200" y="200" width="400" height="200" rx="10" ry="10" fill="#e5e7eb" stroke="#9333ea" stroke-width="8" />
+  <rect x="280" y="175" width="80" height="50" fill="#9333ea" />
+  <rect x="440" y="175" width="80" height="50" fill="#9333ea" />
+  <rect x="225" y="375" width="350" height="25" rx="5" ry="5" fill="#9333ea" />
+  <text x="400" y="500" font-family="Arial" font-size="28" text-anchor="middle" fill="#9333ea">Documentaries</text>
+</svg>
