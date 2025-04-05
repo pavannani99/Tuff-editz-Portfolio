@@ -128,7 +128,7 @@ const Contact = () => {
               </form>
             </div>
             <div className="md:w-1/2 bg-gray-100 p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
+              <h3 className="text-2xl font-semibold mb-6">Connect With Me</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
